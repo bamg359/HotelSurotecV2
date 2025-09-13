@@ -11,8 +11,6 @@ import lombok.Setter;
 @Table(name = "bed_room_type")
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 public class BedRoomTypeEntity {
 
     @Id
@@ -21,4 +19,21 @@ public class BedRoomTypeEntity {
     private Integer idTipo;
     @Column(name = "name_type", nullable = false, length = 50)
     private String nombreTipo;
+
+
+    public Integer getIdTipo() {
+        return idTipo;
+    }
+
+    public void setIdTipo(Integer idTipo) {
+        this.idTipo = idTipo;
+    }
+
+    public String getNombreTipo() {
+        return nombreTipo;
+    }
+
+    public void setNombreTipo(String nombreTipo) {
+        this.nombreTipo = nombreTipo;
+    }
 }
