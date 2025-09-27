@@ -7,4 +7,9 @@ import java.util.List;
 public interface BedRoomTypeRepository {
 
     public List<BedRoomTypeDTO> getBedRoomsType();
+
+
+    public BedRoomTypeDTO getBedRoomById(int id_type);
+
+    public BedRoomTypeDTO createBedRoomType(BedRoomTypeDTO bedRoomTypeDTO);
 }

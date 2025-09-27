@@ -22,4 +22,15 @@ public class BedRoomTypeService {
         return bedRoomTypeRepository.getBedRoomsType();
     }
 
+
+    public BedRoomTypeDTO getBedRoomById(int id_type) {
+        return bedRoomTypeRepository.getBedRoomById(id_type);
+    }
+
+
+    public BedRoomTypeDTO createBedRoomType(BedRoomTypeDTO bedRoomTypeDTO) {
+        return bedRoomTypeRepository.createBedRoomType(bedRoomTypeDTO);
+    }
+
+
 }

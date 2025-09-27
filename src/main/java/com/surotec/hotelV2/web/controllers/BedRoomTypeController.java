@@ -4,9 +4,7 @@ package com.surotec.hotelV2.web.controllers;
 import com.surotec.hotelV2.domain.dto.BedRoomTypeDTO;
 import com.surotec.hotelV2.domain.services.BedRoomTypeService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,6 +22,17 @@ public class BedRoomTypeController {
 
         return this.bedRoomTypeService.getBedRooms();
 
+    }
+
+    @GetMapping("/bedroom_type_id/{id_type}")
+    public BedRoomTypeDTO getBedRoomById(@PathVariable int id_type) {
+        return bedRoomTypeService.getBedRoomById(id_type);
+    }
+
+
+    @PostMapping("/create_bedroom_type" )
+    public BedRoomTypeDTO createBedRoomType(@RequestBody BedRoomTypeDTO bedRoomTypeDTO) {
+        return bedRoomTypeService.createBedRoomType(bedRoomTypeDTO);
     }
 
 }
