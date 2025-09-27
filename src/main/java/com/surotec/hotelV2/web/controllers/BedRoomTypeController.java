@@ -35,4 +35,10 @@ public class BedRoomTypeController {
         return bedRoomTypeService.createBedRoomType(bedRoomTypeDTO);
     }
 
+
+    @PutMapping("/update_bedroom_type/{id_type}")
+    public BedRoomTypeDTO updateBedRoomType(@PathVariable Integer id_type , @RequestBody BedRoomTypeDTO bedRoomTypeDTO){
+        return bedRoomTypeService.updateBedRoomType(id_type, bedRoomTypeDTO);
+    }
+
 }
