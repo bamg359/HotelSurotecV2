@@ -38,4 +38,9 @@ public class BedRoomTypeService {
     }
 
 
+    public void deleteBedRoomType(Integer id_type){
+        bedRoomTypeRepository.deleteBedRoomType(id_type);
+    }
+
+
 }
