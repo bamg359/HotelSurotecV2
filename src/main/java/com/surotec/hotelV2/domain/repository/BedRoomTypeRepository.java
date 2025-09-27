@@ -14,4 +14,6 @@ public interface BedRoomTypeRepository {
     public BedRoomTypeDTO createBedRoomType(BedRoomTypeDTO bedRoomTypeDTO);
 
     public BedRoomTypeDTO updateBedRoomType(Integer id_type , BedRoomTypeDTO bedRoomTypeDTO);
+
+    public void deleteBedRoomType(Integer id_type);
 }
