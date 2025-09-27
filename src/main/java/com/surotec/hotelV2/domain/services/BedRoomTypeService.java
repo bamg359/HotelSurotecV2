@@ -33,4 +33,9 @@ public class BedRoomTypeService {
     }
 
 
+    public BedRoomTypeDTO updateBedRoomType(Integer id_type , BedRoomTypeDTO bedRoomTypeDTO){
+        return bedRoomTypeRepository.updateBedRoomType(id_type, bedRoomTypeDTO);
+    }
+
+
 }

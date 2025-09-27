@@ -40,4 +40,15 @@ public class BedRoomTypeEntityRepository implements BedRoomTypeRepository {
     }
 
 
+    @Override
+    public BedRoomTypeDTO updateBedRoomType(Integer id_type, BedRoomTypeDTO bedRoomTypeDTO) {
+
+        BedRoomTypeEntity bedRoomTypeEntity = this.crudBedRoomType.findById(id_type).orElse(null);
+
+        if(bedRoomTypeEntity == null) return null;
+
+        return this.bedRoomTypeMapper.toBedRoomTypeDTO(this.crudBedRoomType.save(this.bedRoomTypeMapper.toBedRoomTypeEntity(bedRoomTypeDTO)));
+    }
+
+
 }
