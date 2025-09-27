@@ -50,5 +50,10 @@ public class BedRoomTypeEntityRepository implements BedRoomTypeRepository {
         return this.bedRoomTypeMapper.toBedRoomTypeDTO(this.crudBedRoomType.save(this.bedRoomTypeMapper.toBedRoomTypeEntity(bedRoomTypeDTO)));
     }
 
+    @Override
+    public void deleteBedRoomType(Integer id_type) {
+        this.crudBedRoomType.deleteById(id_type);
+    }
+
 
 }

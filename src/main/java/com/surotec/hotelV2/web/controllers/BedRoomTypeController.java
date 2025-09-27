@@ -41,4 +41,10 @@ public class BedRoomTypeController {
         return bedRoomTypeService.updateBedRoomType(id_type, bedRoomTypeDTO);
     }
 
+
+    @DeleteMapping("/delete_bedroom_type/{id_type}")
+    public void deleteBedRoomType(@PathVariable Integer id_type){
+        bedRoomTypeService.deleteBedRoomType(id_type);
+    }
+
 }
